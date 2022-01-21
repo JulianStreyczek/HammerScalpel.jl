@@ -1,0 +1,26 @@
+Matlab: fmincon stopping criteria:
+FunctionTolerance = NaN;
+MaxEvaluations = 2500;
+OptimalityTolerance = 1.0e-6;
+StepTolerance = 1.0e-10;
+
+
+Julia: NLopt stopping criteria:
+all zero by standard:
+opt.ftol_rel
+opt.ftol_abs
+opt.xtol_rel
+opt.xtol_abs = 1.0e-10 .* ones(3);
+opt.maxeval = 2500;
+opt.maxtime
+
+notest, SLSQP, Forward(5-1): FORCED_STOP 97364 times (46.9%).
+notest, SLSQP, Central(5-1): FORCED_STOP 131294 times (63.25%).
+notest, SLSQP, BAckward(5-1): FORCED_STOP 42333 times (20.39%) (good plot)
+notest, SLSQP, Forward(3-1): FORCED_STOP 78710 times (37.92%).
+notest, SLSQP, Backward(3-1): FORCED_STOP 2258 times (1.09%). (good plot)
+notest, SLSQP, Backward(2-1): FORCED_STOP 1728 times (0.83%). (good plot)
+
+untarget, SLSQP, Backward(2-1): FORCED_STOP 1728 times (0.83%). (good plot)
+
+isolate, SLSQP, Backward(2-1): FORCED_STOP 1721 times (0.83%).
