@@ -1,4 +1,3 @@
 using Test, HammerScalpel
 
-@test hello("Julia") == "Hello, Julia"
-@test domath(2.0) ≈ 7.0
+@test solveModel(TT=2, ndims=3)==Nothing
