@@ -16,7 +16,7 @@ If no arguments are provided, then stored results obtained with default paramete
 # Arguments:
 - `noint::Dict`: Output from [`nopolicy`](@ref).
 - `notest::Dict`: Output from [`withpolicy(::String)`](@ref) with policy `notest`.
-- `untarget::Dict`: Output from [`withpolicy(::String)`](@ref) with policy `untarget`.
+- `untarget::Dict`: Output from [`withpolicy(::String)`](@ref) with policy `untargettest`.
 
 """
 function createFig5(noint::Dict, notest::Dict, untarget::Dict) 
