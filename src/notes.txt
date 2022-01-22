@@ -14,13 +14,9 @@ opt.xtol_abs = 1.0e-10 .* ones(3);
 opt.maxeval = 2500;
 opt.maxtime
 
-notest, SLSQP, Forward(5-1): FORCED_STOP 97364 times (46.9%).
-notest, SLSQP, Central(5-1): FORCED_STOP 131294 times (63.25%).
-notest, SLSQP, BAckward(5-1): FORCED_STOP 42333 times (20.39%) (good plot)
-notest, SLSQP, Forward(3-1): FORCED_STOP 78710 times (37.92%).
-notest, SLSQP, Backward(3-1): FORCED_STOP 2258 times (1.09%). (good plot)
-notest, SLSQP, Backward(2-1): FORCED_STOP 1728 times (0.83%). (good plot)
+1.
+Run untarget, isolate for 75 periods: Do Fig 6, 7 improve?
+Implement global search
 
-untarget, SLSQP, Backward(2-1): FORCED_STOP 1728 times (0.83%). (good plot)
-
-isolate, SLSQP, Backward(2-1): FORCED_STOP 1721 times (0.83%).
+2.
+Grafiken mit Slider: SK vs GER
