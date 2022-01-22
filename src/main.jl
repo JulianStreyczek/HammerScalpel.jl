@@ -21,7 +21,7 @@ include("figures_paper.jl")
 include("helperfunctions.jl")
 
 # Solve model with standard parameters
-@time noint    = nopolicy(TT);                 # no intervention at all
+@time noint    = nopolicy();                # no intervention at all
 @time notest   = withpolicy("notest");         # no testing 
 @time untarget = withpolicy("untargettest");   # untargeted testing
 @time target   = withpolicy("targettest");     # targeted testing
@@ -40,9 +40,9 @@ createFig6(notest, untarget, target)
 createFig7(untarget, target, isolate)
 
 # Figures (using stored data)
-createFig5()
-createFig6()
-createFig7()
+#createFig5()
+#createFig6()
+#createFig7()
 
 
 

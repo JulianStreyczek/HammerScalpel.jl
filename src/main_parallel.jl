@@ -41,11 +41,11 @@ addprocs(nprocs)
 end
 
 # Solve model with standard parameters
-@time noint    = nopolicy(TT);                        # no intervention at all
-@time notest   = withpolicy("notest", nprocs);        # no testing 
-@time untarget = withpolicy("untargettest", nprocs);  # untargeted testing
-@time target   = withpolicy("targettest", nprocs);    # targeted testing
-@time isolate  = withpolicy("isolate", nprocs);       # isolation
+@time noint    = nopolicy();                          # no intervention at all
+@time notest   = withpolicy("notest", nprocs;);        # no testing 
+@time untarget = withpolicy("untargettest", nprocs;);  # untargeted testing
+@time target   = withpolicy("targettest", nprocs;);    # targeted testing
+@time isolate  = withpolicy("isolate", nprocs;);       # isolation
 
 # Save important objects
 #save("src/data/calib1_nointervention.jld2", noint);
@@ -60,7 +60,7 @@ createFig6(notest, untarget, target)
 createFig7(untarget, target, isolate)
 
 # Figures (using stored data)
-createFig5()
-createFig6()
-createFig7()
+#createFig5()
+#createFig6()
+#createFig7()
 
