@@ -3,6 +3,7 @@
 # Replication of Chari, Kirpalani, and Phelan (2021)
 
 [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://julianstreyczek.github.io/HammerScalpel.jl/dev/)
+[![Build Status](https://github.com/JulianStreyczek/HammerScalpel.jl/workflows/CI/badge.svg)](https://github.com/JulianStreyczek/HammerScalpel.jl/actions?query=workflow%3ACI+branch%3Amain)
 
 > This project was conducted as a final assignment for the PhD course [Numerical Methods](https://floswald.github.io/NumericalMethods/) at Bocconi University in Fall 2021. 
 
