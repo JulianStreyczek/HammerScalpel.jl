@@ -10,7 +10,7 @@ The authors develop a theoretical model that combines epidemic transmission and 
 
 ## Installation
 
-This package is not listed as an official Julia package. If you wish to use it, you may clone [this Github repository](https://github.com/JulianStreyczek?tab=repositories) to your machine. You then have two options:
+This package is not listed as an official Julia package. If you wish to use it, you may clone [this Github repository](https://github.com/JulianStreyczek/HammerScalpel.jl) to your machine. You then have two options:
 
 **Use as a package:** Start up Julia and go into the package editor by typing `]`. Then, type
 
@@ -32,16 +32,16 @@ If you wish run the replication from beginning to end, simply type
     solveModel()
 
 This will call all necessary functions in the correct order. 
-Specifically, it first computes the no-intervention outcome using [`nopolicy`](@ref), and the respective outcome under the various policies using [`withpolicy`](@ref).
+Specifically, it first computes the no-intervention outcome using [`nopolicy`](@ref), and the respective outcomes under the various policies using [`withpolicy`](@ref). Then, it plots the evolution of the model under different policies over time using [`createFig5`](@ref), [`createFig6`](@ref), and [`createFig7`](@ref).
 
-Since the computations may take a while, you have the option to run them more efficiently on multiple CPU cores at the same time. 
+Since solving the model may take a while, you have the option to run them more efficiently on multiple CPU cores at the same time. 
 To do so, type
 
     solveModel(nprocs)
 
 where `nprocs` specifies the number of logical cores on your CPU. 
 
-If you just want to check my results without running the simulations yourself, you may use stored outcomes for default parameters for creating the figures by running
+If you just want to check my results without running the simulations yourself, you may use stored outcomes that I obtained under default parameters. You can recreate the figures by running
 
     createFig5()
     createFig6()
