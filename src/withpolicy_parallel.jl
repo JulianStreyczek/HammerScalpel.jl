@@ -26,7 +26,7 @@ function withpolicy(policy::String, nprocs::Int64; TT=52, ndims=20, thetai=0.38,
         TEST = 1;
         theti = thetai;
         thets = thetas;
-        algorithm = NLopt.LN_BOBYQA;
+        algorithm = NLopt.LN_SBPLX;
     elseif policy == "isolate"
         ISO = 1;
         TEST = 0;
@@ -148,7 +148,7 @@ function withpolicy(policy::String, nprocs::Int64; TT=52, ndims=20, thetai=0.38,
                         end
                         opt.lower_bounds = lb;
                         opt.upper_bounds = ub;
-                        opt.xtol_abs = 1.0e-8 .* ones(3);
+                        opt.xtol_abs = 1.0e-10 .* ones(3);
                         opt.maxeval=2500;
                         (optf, optx, ret) = optimize(opt, x0)
                         rets[i,j,k,l] = ret_value[ret];

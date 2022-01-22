@@ -179,6 +179,24 @@ function withpolicy(policy::String; TT=52, ndims=20, thetai=0.38, thetas=0.0044)
                         opt.xtol_abs = 1.0e-8 .* ones(3);
                         opt.maxeval=2500;
                         (optf, optx, ret) = optimize(opt, x0)
+                        # If local optimizer did not converge, perform global search
+                        #if ret==:FORCED_STOP
+                        #    # Local optimizer
+                        #    local_opt = Opt(NLopt.LD_SLSQP, 3);
+                        #    local_opt.xtol_abs = 1.0e-8 .* ones(3);
+                        #    local_opt.maxeval=2500;
+                        #    # Global optimizer
+                        #    opt = Opt(NLopt.AUGLAG, 3);
+                        #    opt.min_objective = (x,g) -> Bellman_NLopt(Par, Grid, S, I, R, V00, x, g);
+                        #    #opt.min_objective = (x,g) -> Bellman(Par, Grid, S, I, R, V00, x);
+                        #    opt.local_optimizer = local_opt;
+                        #    opt.lower_bounds = lb;
+                        #    opt.upper_bounds = ub;
+                        #    opt.xtol_abs = 1.0e-8 .* ones(3);
+                        #    opt.maxeval=2500;
+                        #    #opt.population = 20;
+                        #    (optf, optx, ret) = optimize(opt, x0)
+                        #end
                         rets[i,j,k,l] = ret_value[ret];
                         qq[i,j,k,l] = optx[1];
                         ll[i,j,k,l] = optx[2];
