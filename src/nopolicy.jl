@@ -5,12 +5,12 @@
 ####################################################
 
 """
-    nopolicy(;TT=52)
+    nopolicy(; TT=52)
 Simulate the model in Chari, Kirpalani, and Phelan (2021) for `TT` periods under no government response. 
 The output is a [`Dict`](https://docs.julialang.org/en/v1/base/collections/#Dictionaries) containing 
 the necessary variables and time-series for generating the figures. 
 """
-function nopolicy(;TT=52)
+function nopolicy(; TT=52)
     
     # Parameters
     ISO = 0;
